@@ -1,15 +1,15 @@
 import Debug "mo:base/Debug";
 
 actor DBank {
-  var currentValue: Nat = 300;
-  currentValue := 40000;
+  stable var currentValue: Nat = 300;
+  // currentValue := 40000;
 
   let id = 35646854182316451;
   // Debug.print(debug_show(id));
 
   public func topUp(amount: Nat){
     currentValue += amount;
-    Debug.print(debug_show(currentValue))
+    Debug.print(debug_show(currentValue));
   };
 
 // Allow users to withdraw an amount from the currentValue
