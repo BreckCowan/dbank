@@ -21,18 +21,17 @@ document.querySelector("form").addEventListener("submit", async function(event) 
   }
   
   if (document.getElementById("withdrawl-amount").value.length != 0) {
-    await dbank.withdrawl(outputAmount)
+    await dbank.withdrawl(outputAmount);
   }
 
   await dbank.compound();
   
-  
-  
+  update();
+
   document.getElementById("input-amount").value = "";
   document.getElementById("withdrawl-amount").value = "";
 
   button.removeAttribute("disabled");
-
 });
 
 async function update() {
